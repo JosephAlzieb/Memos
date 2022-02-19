@@ -1,18 +1,20 @@
 package domain;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.Period;
 
 public class Memo {
 
     private int id;
     private  String titel;
-    private  final LocalDate von;
-    private  final LocalDate bis;
+    private  final LocalDateTime von;
+    private  final LocalDateTime bis;
     private  String beschreibung;
     private  boolean erledigt;
     private int person;
 
-    public Memo(int id, String titel, LocalDate von, LocalDate bis, String beschreibung, boolean erledigt, int person) {
+    public Memo(int id, String titel, LocalDateTime von, LocalDateTime bis, String beschreibung, boolean erledigt, int person) {
         this.id = id;
         this.titel = titel;
         this.von = von;
@@ -30,14 +32,6 @@ public class Memo {
         this.titel = titel;
     }
 
-    public LocalDate getVon() {
-        return von;
-    }
-
-
-    public LocalDate getBis() {
-        return bis;
-    }
 
     public String getBeschreibung() {
         return beschreibung;
@@ -56,4 +50,7 @@ public class Memo {
     }
 
 
+    public int getDaur() {
+        return bis.getHour() - von.getHour();
+    }
 }

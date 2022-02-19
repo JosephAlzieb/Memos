@@ -1,0 +1,5 @@
+rootProject.name = 'Memos'
+include 'memos_core'
+include 'memos_app'
+include 'memos_spring'
+

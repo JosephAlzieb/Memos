@@ -8,5 +8,5 @@ public interface MemoRepository {
 
     public Memo getMemoById(int id);
     public List<Memo> getMemoByPersonId(int personId);
-    public boolean saveMemo(Memo memo);
+    public void saveMemo(Memo memo);
 }
